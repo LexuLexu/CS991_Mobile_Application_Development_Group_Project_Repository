@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-    }
+}
 
     public void login_action(View view) {
 
