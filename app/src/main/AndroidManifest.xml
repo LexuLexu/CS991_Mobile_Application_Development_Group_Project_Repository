@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".tutorAccountListActivity"
-            android:label="@string/title_tutoraccount_list"
+            android:label="List of Tutors"
             android:parentActivityName=".MainPageActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -20,7 +20,7 @@
         </activity>
         <activity
             android:name=".tutorAccountDetailActivity"
-            android:label="@string/title_tutoraccount_detail"
+            android:label="Tutor Details"
             android:parentActivityName=".tutorAccountListActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
