@@ -22,7 +22,7 @@ import androidx.appcompat.app.ActionBar;
 
 import android.view.MenuItem;
 
-import com.example.tutorprototype1.dummy.DummyContent;
+import com.example.tutorprototype1.dummy.Content;
 
 import java.util.List;
 
@@ -96,22 +96,22 @@ public class tutorAccountListActivity extends AppCompatActivity {
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
-        recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(this, DummyContent.ITEMS, mTwoPane));
+        recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(this, Content.ITEMS, mTwoPane));
     }
 
     public static class SimpleItemRecyclerViewAdapter
             extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
 
         private final tutorAccountListActivity mParentActivity;
-        private final List<DummyContent.DummyItem> mValues;
+        private final List<Content.DummyItem> mValues;
         private final boolean mTwoPane;
         private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DummyContent.DummyItem item = (DummyContent.DummyItem) view.getTag();
+                Content.DummyItem item = (Content.DummyItem) view.getTag();
                 if (mTwoPane) {
                     Bundle arguments = new Bundle();
-                    arguments.putString(tutorAccountDetailFragment.ARG_ITEM_ID, item.id);
+                    arguments.putString(tutorAccountDetailFragment.ARG_ITEM_ID, item.name);
                     tutorAccountDetailFragment fragment = new tutorAccountDetailFragment();
                     fragment.setArguments(arguments);
                     mParentActivity.getSupportFragmentManager().beginTransaction()
@@ -120,7 +120,7 @@ public class tutorAccountListActivity extends AppCompatActivity {
                 } else {
                     Context context = view.getContext();
                     Intent intent = new Intent(context, tutorAccountDetailActivity.class);
-                    intent.putExtra(tutorAccountDetailFragment.ARG_ITEM_ID, item.id);
+                    intent.putExtra(tutorAccountDetailFragment.ARG_ITEM_ID, item.name);
 
                     context.startActivity(intent);
                 }
@@ -128,7 +128,7 @@ public class tutorAccountListActivity extends AppCompatActivity {
         };
 
         SimpleItemRecyclerViewAdapter(tutorAccountListActivity parent,
-                                      List<DummyContent.DummyItem> items,
+                                      List<Content.DummyItem> items,
                                       boolean twoPane) {
             mValues = items;
             mParentActivity = parent;
@@ -144,8 +144,8 @@ public class tutorAccountListActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
-            holder.mIdView.setText(mValues.get(position).id);
-            holder.mContentView.setText(mValues.get(position).content);
+            holder.mIdView.setText(mValues.get(position).name);
+            holder.mContentView.setText(mValues.get(position).details);
 
             holder.itemView.setTag(mValues.get(position));
             holder.itemView.setOnClickListener(mOnClickListener);
