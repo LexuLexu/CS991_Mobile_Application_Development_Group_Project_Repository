@@ -55,7 +55,7 @@ public class tutorAccountListActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Sorry, there are no tutors here yet!", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Tutor list refreshed!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });

@@ -1,18 +1,25 @@
 package com.example.tutorprototype1;
 
 import android.app.Activity;
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.os.Bundle;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.tutorprototype1.dummy.Content;
+
+import static androidx.core.content.ContextCompat.getSystemService;
 
 /**
  * A fragment representing a single tutorAccount detail screen.
@@ -61,12 +68,17 @@ public class tutorAccountDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.tutoraccount_detail, container, false);
+        TextView userExtendedDetails = rootView.findViewById(R.id.tutoraccount_detail);
+        ImageView userImageView = rootView.findViewById(R.id.userImage);
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.tutoraccount_detail)).setText(mItem.extended_details);
+            userExtendedDetails.setText(mItem.extended_details);
+            userImageView.setImageResource(mItem.profile_pic);
+            userImageView.setVisibility(View.VISIBLE);
         }
 
         return rootView;
     }
+
 }

@@ -30,7 +30,8 @@
         <activity
             android:name=".SearchTutorActivity"
             android:parentActivityName=".MainPageActivity" />
-        <activity android:name=".rateTutorActivity" />
+        <activity android:name=".rateTutorActivity"
+                  android:parentActivityName=".MainPageActivity"/>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainPageActivity" />
         <activity android:name=".MainActivity">
