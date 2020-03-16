@@ -16,6 +16,8 @@ public class Content {
         ITEM_MAP.put(item.name, item);
     }
 
+    // What is displayed
+
     public static class DummyItem {
         public final String name;
         public final String email;
