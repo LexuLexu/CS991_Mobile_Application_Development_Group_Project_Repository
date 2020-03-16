@@ -16,6 +16,8 @@ import java.util.LinkedHashMap;
 
 public class MainActivity extends AppCompatActivity {
 
+    // test comment
+
     private TextView emailEntry;
     private TextView passwordEntry;
 
@@ -93,3 +95,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
+// hi
+
+
