@@ -100,4 +100,15 @@
         app:layout_constraintBottom_toTopOf="@+id/registerButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/passVisibleToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintStart_toEndOf="@+id/passwordInput"
+        app:layout_constraintTop_toTopOf="@+id/passwordInput"
+        app:srcCompat="@android:drawable/ic_menu_view" />
 </androidx.constraintlayout.widget.ConstraintLayout>

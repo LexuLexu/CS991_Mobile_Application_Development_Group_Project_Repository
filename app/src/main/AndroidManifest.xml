@@ -9,9 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SearchTutorActivity"
+        <activity
+            android:name=".tutorAccountListActivity"
+            android:label="List of Tutors"
+            android:parentActivityName=".MainPageActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tutorprototype1.MainPageActivity" />
+        </activity>
+        <activity
+            android:name=".tutorAccountDetailActivity"
+            android:label="Tutor Details"
+            android:parentActivityName=".tutorAccountListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tutorprototype1.tutorAccountListActivity" />
+        </activity>
+        <activity
+            android:name=".SearchTutorActivity"
+            android:parentActivityName=".MainPageActivity" />
+        <activity android:name=".rateTutorActivity"
                   android:parentActivityName=".MainPageActivity"/>
-        <activity android:name=".rateTutorActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainPageActivity" />
         <activity android:name=".MainActivity">
