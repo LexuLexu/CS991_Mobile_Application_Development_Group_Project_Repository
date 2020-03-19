@@ -38,18 +38,35 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/rateATutor"
+    android:id="@+id/rateATutor"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@android:color/holo_orange_light"
+    android:onClick="rateTutor_action"
+    android:text="Rate a Tutor"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/searchForTutor" />
+
+    <Button
+        android:id="@+id/tutorList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="112dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:background="@android:color/holo_orange_light"
-        android:onClick="rateTutor_action"
-        android:text="Rate a Tutor"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="tutorList_action"
+        android:text="Tutor List"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchForTutor" />
+        app:layout_constraintTop_toBottomOf="@id/searchForTutor" />
 </androidx.constraintlayout.widget.ConstraintLayout>

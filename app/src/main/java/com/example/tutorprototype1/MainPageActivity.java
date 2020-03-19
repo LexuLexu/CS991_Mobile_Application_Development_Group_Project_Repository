@@ -33,6 +33,13 @@ public class MainPageActivity extends AppCompatActivity {
         return;
     }
 
+    public void tutorList_action(View view) {
+
+        Intent tutorListIntent = new Intent(MainPageActivity.this, tutorAccountListActivity.class);
+        MainPageActivity.this.startActivity(tutorListIntent);
+        return;
+    }
+
 
 
 }

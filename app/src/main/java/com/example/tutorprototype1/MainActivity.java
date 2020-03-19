@@ -1,15 +1,20 @@
 package com.example.tutorprototype1;
 
+// RACHELS TEST COMMENT
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.CycleInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.LinkedHashMap;
@@ -42,7 +47,24 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < Math.min(emailAddresses.length, passwords.length); i++) {
             loginMap.put(emailAddresses[i], passwords[i]);
         }
-    }
+
+        ImageView passToggle = findViewById(R.id.passVisibleToggle);
+
+        passToggle.setOnTouchListener(new View.OnTouchListener() {
+            public boolean onTouch(View v, MotionEvent event) {
+
+                switch ( event.getAction() ) {
+                    case MotionEvent.ACTION_DOWN:
+                        passwordEntry.setInputType(InputType.TYPE_CLASS_TEXT);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        passwordEntry.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                        break;
+                }
+                return true;
+            }
+        });
+}
 
     public void login_action(View view) {
 

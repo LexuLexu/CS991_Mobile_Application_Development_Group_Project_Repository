@@ -186,4 +186,7 @@
         <item>Attained PhD</item>
     </string-array>
 
+    <string name="title_tutoraccount_list">tutorAccounts</string>
+    <string name="title_tutoraccount_detail">tutorAccount Detail</string>
+
 </resources>
