@@ -8,6 +8,18 @@
     tools:context=".tutorAccountDetailActivity"
     tools:ignore="MergeRootFrame">
 
+    <Button
+        android:id="@+id/rateThisTutor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        app:layout_anchor="@+id/tutoraccount_detail_container"
+        app:layout_anchorGravity="bottom"
+        android:background="@android:color/holo_orange_light"
+        android:onClick="rateTutor_action"
+        android:text="Rate This Tutor" />
+
+
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
@@ -24,13 +36,6 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:toolbarId="@+id/toolbar">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/detail_toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -39,6 +44,7 @@
         android:id="@+id/tutoraccount_detail_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:onClick="rateTutor_action"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -50,5 +56,13 @@
         app:layout_anchor="@+id/tutoraccount_detail_container"
         app:layout_anchorGravity="top|end"
         app:srcCompat="@android:drawable/stat_notify_chat" />
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
