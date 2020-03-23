@@ -23,23 +23,34 @@ public class MainPageActivity extends AppCompatActivity {
 
         Intent rateTutorIntent = new Intent(MainPageActivity.this, rateTutorActivity.class);
         MainPageActivity.this.startActivity(rateTutorIntent);
-        return;
+
     }
 
     public void searchTutor_action(View view) {
 
         Intent searchTutorIntent = new Intent(MainPageActivity.this, SearchTutorActivity.class);
         MainPageActivity.this.startActivity(searchTutorIntent);
-        return;
+
     }
 
     public void tutorList_action(View view) {
 
         Intent tutorListIntent = new Intent(MainPageActivity.this, tutorAccountListActivity.class);
         MainPageActivity.this.startActivity(tutorListIntent);
-        return;
+
     }
 
+    public void notifications_action(View view) {
+
+        Intent notificationIntent = new Intent(MainPageActivity.this, NotificationsActivity.class);
+        MainPageActivity.this.startActivity(notificationIntent);
+    }
+
+    public void groupChat_action(View view) {
+
+        Intent groupChatIntent = new Intent(MainPageActivity.this, GroupChatActivity.class);
+        MainPageActivity.this.startActivity(groupChatIntent);
+    }
 
 
 }
