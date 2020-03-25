@@ -1,5 +1,7 @@
 package com.example.tutorprototype1;
 
+// RACHELS TEST COMMENT
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -18,6 +20,8 @@ import android.widget.TextView;
 import java.util.LinkedHashMap;
 
 public class MainActivity extends AppCompatActivity {
+
+    // test comment
 
     private TextView emailEntry;
     private TextView passwordEntry;
@@ -113,3 +117,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
+// hi
+
+

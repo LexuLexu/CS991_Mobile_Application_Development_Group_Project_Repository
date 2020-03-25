@@ -85,4 +85,13 @@ public class tutorAccountDetailActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    // adding action to tutor account page
+
+    public void rateTutor_action(View view) {
+
+        Intent rateTutorIntent = new Intent(tutorAccountDetailActivity.this, rateTutorActivity.class);
+        tutorAccountDetailActivity.this.startActivity(rateTutorIntent);
+        return;
+    }
 }
