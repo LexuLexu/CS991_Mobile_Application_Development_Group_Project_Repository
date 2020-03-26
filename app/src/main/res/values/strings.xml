@@ -188,5 +188,17 @@
 
     <string name="title_tutoraccount_list">tutorAccounts</string>
     <string name="title_tutoraccount_detail">tutorAccount Detail</string>
+    <string name="kostasimage">kostasImage</string>
+    <string name="gordonfeedbackimage">gordonfeedbackimage</string>
+    <string name="sophiefeedbackimage">sophiefeedbackimage</string>
+    <string name="marcusfeedbackimage">marcusfeedbackimage</string>
+    <string name="fivestarrating">fivestarrating</string>
+    <string name="threestarrating">threestarrating</string>
+    <string name="kostasratings">kostasratings</string>
+    <string name="fourstartrating">fourstartrating</string>
+    <string name="gordonratings">gordonratings</string>
+    <string name="threestarratings_2">threestarratings_2</string>
+    <string name="sophieratings">sophieratings</string>
+    <string name="marcusratings">marcusratings</string>
 
 </resources>
