@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".feedbackActivity"></activity>
-        <activity android:name=".GroupChatActivity" />
-        <activity android:name=".NotificationsActivity" />
+        <activity android:name=".feedbackActivity"
+                  android:parentActivityName=".MainPageActivity" />
+        <activity android:name=".GroupChatActivity"
+                  android:parentActivityName=".MainPageActivity"/>
+        <activity android:name=".NotificationsActivity"
+                  android:parentActivityName=".MainPageActivity" />
         <activity
             android:name=".tutorAccountListActivity"
             android:label="List of Tutors"
