@@ -200,5 +200,15 @@
     <string name="threestarratings_2">threestarratings_2</string>
     <string name="sophieratings">sophieratings</string>
     <string name="marcusratings">marcusratings</string>
+    <string name="Messages">Messages</string>
+    <string name="Kostas">Kostas</string>
+    <string name="Gordon">Gordon</string>
+    <string name="Sophie">Sophie</string>
+    <string name="Marcus">Marcus</string>
+    <string name="KostasMessage">Looks Perfect!</string>
+    <string name="GordonMessage">How about trying this</string>
+    <string name="SophieMessage">Would you be able to help with this?</string>
+    <string name="MarcusMessage">Hello</string>
+    <string name="Unread">(unread)</string>
 
 </resources>
