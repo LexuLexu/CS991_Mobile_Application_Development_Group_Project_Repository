@@ -188,5 +188,31 @@
 
     <string name="title_tutoraccount_list">tutorAccounts</string>
     <string name="title_tutoraccount_detail">tutorAccount Detail</string>
-
+    <string name="kostasimage">kostasImage</string>
+    <string name="gordonfeedbackimage">gordonfeedbackimage</string>
+    <string name="sophiefeedbackimage">sophiefeedbackimage</string>
+    <string name="marcusfeedbackimage">marcusfeedbackimage</string>
+    <string name="fivestarrating">fivestarrating</string>
+    <string name="threestarrating">threestarrating</string>
+    <string name="kostasratings">kostasratings</string>
+    <string name="fourstartrating">fourstartrating</string>
+    <string name="gordonratings">gordonratings</string>
+    <string name="threestarratings_2">threestarratings_2</string>
+    <string name="sophieratings">sophieratings</string>
+    <string name="marcusratings">marcusratings</string>
+    <string name="Messages">Messages</string>
+    <string name="Kostas">Kostas</string>
+    <string name="Gordon">Gordon</string>
+    <string name="Sophie">Sophie</string>
+    <string name="Marcus">Marcus</string>
+    <string name="KostasMessage">- Looks Perfect!</string>
+    <string name="GordonMessage">- How about trying this</string>
+    <string name="SophieMessage">- Would you be able to help with this?</string>
+    <string name="MarcusMessage">- Hello</string>
+    <string name="Unread">(unread)</string>
+    <string name="GroupChats">Group Chats</string>
+    <string name="GroupChat1">Mobile Dev Chat</string>
+    <string name="GroupChat2">Database Dev Chat</string>
+    <string name="GroupChat3">SQL Querys Problem</string>
+    <string name="GroupChat4">OOP Java</string>
 </resources>

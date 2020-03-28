@@ -9,6 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".messageActivity"
+                  android:parentActivityName=".MainPageActivity" />
+        <activity android:name=".feedbackActivity"
+                  android:parentActivityName=".MainPageActivity" />
+        <activity android:name=".GroupChatActivity"
+                  android:parentActivityName=".MainPageActivity"/>
+        <activity android:name=".NotificationsActivity"
+                  android:parentActivityName=".MainPageActivity" />
+
         <activity
             android:name=".tutorAccountListActivity"
             android:label="List of Tutors"
@@ -30,7 +40,9 @@
         <activity
             android:name=".SearchTutorActivity"
             android:parentActivityName=".MainPageActivity" />
-        <activity android:name=".rateTutorActivity" />
+        <activity
+            android:name=".rateTutorActivity"
+            android:parentActivityName=".tutorAccountListActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainPageActivity" />
         <activity android:name=".MainActivity">

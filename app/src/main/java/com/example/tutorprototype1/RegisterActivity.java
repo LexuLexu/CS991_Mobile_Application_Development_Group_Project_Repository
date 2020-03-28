@@ -20,6 +20,8 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText pass1;
     private EditText pass2;
 
+    MyDBHandler dbHandler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,8 @@ public class RegisterActivity extends AppCompatActivity {
         pass2 = findViewById(R.id.passwordConfirm);
 
         ImageView passToggle = findViewById(R.id.passVisibleToggle);
+
+        dbHandler = new MyDBHandler(this, null, null, 1);
 
         passToggle.setOnTouchListener(new View.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent event) {
@@ -51,6 +55,16 @@ public class RegisterActivity extends AppCompatActivity {
     public void registerButton(View view) {
 
         if (isEmailValid() && isEmailUni() && doPasswordsMatch() && isEmailAvailable() && isNameEntered() && isCitySelected()) {
+
+            EditText emailView = findViewById(R.id.emailInput);
+            String inputEmail = emailView.getText().toString();
+            EditText passView = findViewById(R.id.passwordInput);
+            String inputPass = passView.getText().toString();
+
+            Account newAccount = new Account(inputEmail, inputPass);
+            dbHandler.addAccount(newAccount);
+            System.out.println(dbHandler.databaseToString());
+
             Intent loginIntent = new Intent(RegisterActivity.this, MainPageActivity.class);
             RegisterActivity.this.startActivity(loginIntent);
         }
@@ -102,10 +116,6 @@ public class RegisterActivity extends AppCompatActivity {
         String inputEmail = inputView.getText().toString();
 
         int iEL = inputEmail.length();
-
-        System.out.println(iEL);
-
-        System.out.println(inputEmail.substring(iEL-6, iEL));
 
         if (inputEmail.substring(iEL-6, iEL).equals(".ac.uk")) {
             return true;
