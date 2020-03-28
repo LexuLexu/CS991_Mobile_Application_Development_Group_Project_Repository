@@ -19,9 +19,7 @@ public class MainPageActivity extends AppCompatActivity {
         return;
     }
 
-    public void profile_action(View view) {
-        startActivity(new Intent(MainPageActivity.this, AboutTutorAppActivity.class));
-    }
+
 
     public void rateTutor_action(View view) {
 
@@ -64,6 +62,13 @@ public class MainPageActivity extends AppCompatActivity {
         MainPageActivity.this.startActivity(feedbackIntent);
     }
 
+    //profile activity code
+
+    public void profile_action(View view) {
+
+        Intent profileIntent = new Intent(MainPageActivity.this, ProfileActivity.class);
+        MainPageActivity.this.startActivity(profileIntent);
+    }
 
     //message activity code
 
