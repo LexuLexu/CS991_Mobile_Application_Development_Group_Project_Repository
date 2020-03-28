@@ -19,8 +19,14 @@ public class MainPageActivity extends AppCompatActivity {
         return;
     }
 
-    public void profile_action(View view) {
+    public void aboutPage_action(View view) {
         startActivity(new Intent(MainPageActivity.this, AboutTutorAppActivity.class));
+    }
+
+    public void profile_action(View view) {
+
+        Intent profileIntent = new Intent(MainPageActivity.this, ProfileActivity.class);
+        MainPageActivity.this.startActivity(profileIntent);
     }
 
     public void rateTutor_action(View view) {

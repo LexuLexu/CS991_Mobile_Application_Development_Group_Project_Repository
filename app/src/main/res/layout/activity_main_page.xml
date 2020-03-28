@@ -115,6 +115,20 @@
             android:textColor="#fff"
             android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/aboutPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:background="@android:color/holo_blue_light"
+            android:drawableLeft="@drawable/ic_forum_black_24dp"
+            android:onClick="aboutPage_action"
+            android:padding="10dp"
+            android:text="@string/about_tutor"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
 
     </LinearLayout>
 </ScrollView>
