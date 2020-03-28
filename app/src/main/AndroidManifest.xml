@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GroupChatActivity"></activity>
+        <activity android:name=".AboutTutorAppActivity"
+            android:label="@string/about_tutor"
+            android:parentActivityName=".MainPageActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.tutorprototype1.MainPageActivity" />
+        </activity>
+        <activity android:name=".GroupChatActivity" />
         <activity android:name=".NotificationsActivity" />
         <activity
             android:name=".tutorAccountListActivity"
