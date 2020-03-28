@@ -188,6 +188,14 @@
 
     <string name="title_tutoraccount_list">tutorAccounts</string>
     <string name="title_tutoraccount_detail">tutorAccount Detail</string>
+    <string name="about_tutor_app">About tUtor App</string>
+    <string name="tuto_app_info">Tutor App.....a platform for registered UK University Students to meet in a chatroom.....to discuss academic challenges, exchange ideas and solve assignments. Students can rate tutors based on performance. The app must be user-friendly and easy to navigate.</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="email_address_">group2sd@uni.strath.ac.uk</string>
+    <string name="version_number">Version Number</string>
+    <string name="app_version">V1.0</string>
+    <string name="about_tutor">About tUtor App</string>
+
     <string name="kostasimage">kostasImage</string>
     <string name="gordonfeedbackimage">gordonfeedbackimage</string>
     <string name="sophiefeedbackimage">sophiefeedbackimage</string>
