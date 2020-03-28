@@ -54,7 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void registerButton(View view) {
 
-        if (isEmailValid() && isEmailUni() && doPasswordsMatch() && isEmailAvailable() && isNameEntered() && isCitySelected()) {
+        if (isEmailValid() && isEmailUni() && doPasswordsMatch() && isEmailAvailable() && isNameEntered() && isCitySelected() && isEmailAvailable_Database()) {
 
             EditText emailView = findViewById(R.id.emailInput);
             String inputEmail = emailView.getText().toString();
@@ -181,5 +181,21 @@ public class RegisterActivity extends AppCompatActivity {
         shake.setDuration(400);
         shake.setInterpolator(new CycleInterpolator(5));
         return shake;
+    }
+
+    public boolean isEmailAvailable_Database() {
+
+        EditText emailView = findViewById(R.id.emailInput);
+        String inputEmail = emailView.getText().toString();
+
+        if(!dbHandler.isEmailInDatabase(inputEmail)) {
+            return true;
+        }
+
+        else {
+            emailView.startAnimation(shakeError());
+            emailView.setError("This email is already registered");
+            return false;
+        }
     }
 }

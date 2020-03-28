@@ -35,6 +35,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public void addAccount (Account account) {
         ContentValues values = new ContentValues();
         values.put(COLUMN_ACCOUNTEMAIL, account.getEmail());
+        values.put(COLUMN_ACCOUNTPASSWORD, account.getPassword());
         SQLiteDatabase db = getWritableDatabase();
         db.insert(TABLE_ACCOUNTS, null, values);
         db.close();
@@ -49,7 +50,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public String databaseToString() {
         String dbString = "";
         SQLiteDatabase db = getWritableDatabase();
-        String query = "SELECT * FROM " + TABLE_ACCOUNTS + " WHERE 1";
+        String query = "SELECT * FROM " + TABLE_ACCOUNTS;
 
         Cursor c = db.rawQuery(query, null);
         c.moveToFirst();
@@ -69,4 +70,29 @@ public class MyDBHandler extends SQLiteOpenHelper {
         return dbString;
     }
 
+    public boolean isEmailInDatabase(String inputEmail) {
+
+        String query = "CREATE OR REPLACE FUNCTION email_in_table \n" +
+                "    (input_text IN TEXT) \n" +
+                "    RETURN NUMBER \n" +
+                "IS \n" +
+                "    found NUMBER = 0; \n" +
+                "     \n" +
+                "BEGIN \n" +
+                " \n" +
+                "    SELECT count(*) INTO found \n" +
+                "    FROM " + TABLE_ACCOUNTS +
+                "    WHERE LOWER(accountemail) LIKE LOWER('%'||input_text||'%');\n" +
+                "     \n" +
+                "    RETURN FOUND; \n" +
+                "END email_in_table; \n" +
+                "/" + "\nDECLARE email TEXT;\nBEGIN \nemail := '" + inputEmail + "';\nemail_in_table(email);" + "END;";
+
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL(query);
+
+        // wip
+
+        return false;
+    }
 }
