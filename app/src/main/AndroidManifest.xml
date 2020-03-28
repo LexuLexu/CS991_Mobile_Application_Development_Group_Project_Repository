@@ -16,8 +16,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.tutorprototype1.MainPageActivity" />
         </activity>
-        <activity android:name=".GroupChatActivity" />
-        <activity android:name=".NotificationsActivity" />
 
         <activity android:name=".messageActivity"
                   android:parentActivityName=".MainPageActivity" />
