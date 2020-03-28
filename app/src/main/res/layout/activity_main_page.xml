@@ -67,7 +67,7 @@
             android:layout_margin="20dp"
             android:background="@android:color/holo_blue_light"
             android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
-            android:onClick="messagesList_action"
+            android:onClick="message_action"
             android:padding="10dp"
             android:text="Messages "
             android:textColor="#fff"

@@ -56,5 +56,22 @@ public class MainPageActivity extends AppCompatActivity {
         MainPageActivity.this.startActivity(groupChatIntent);
     }
 
+    //feedback activity code
+
+    public void feedback_action(View view) {
+
+        Intent feedbackIntent = new Intent(MainPageActivity.this, feedbackActivity.class);
+        MainPageActivity.this.startActivity(feedbackIntent);
+    }
+
+
+    //message activity code
+
+    public void message_action(View view) {
+
+        Intent messagesListIntent = new Intent(MainPageActivity.this, messageActivity.class);
+        MainPageActivity.this.startActivity(messagesListIntent);
+    }
+
 
 }
