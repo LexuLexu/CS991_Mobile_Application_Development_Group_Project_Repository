@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="I am an undergraduate Chemistry student currently in my 3rd of University at Strathclyde. I'm really struggling with physical chemistry in general. I find Quantuym Chemistry and Chemical Kinetics the most challenging. I am looking for a tutor that is patient, willing to help and can provide me with additional material on these areas. Any help would be grately appreciated! "
+            android:text="I am an undergraduate Chemistry student currently in my 3rd year of University at Strathclyde. I'm really struggling with physical chemistry in general. I find Quantuym Chemistry and Chemical Kinetics the most challenging. I am looking for a tutor that is patient, willing to help and can provide me with additional material on these areas. Any help would be grately appreciated! "
             android:textColor="#ffff"
             android:textSize="15dp"
             android:textStyle="bold" />
